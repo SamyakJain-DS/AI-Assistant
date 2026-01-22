@@ -1,4 +1,4 @@
-# 🧠 AI Daily Briefing Agent
+<img width="1880" height="983" alt="Assistant Demo 1" src="https://github.com/user-attachments/assets/3d4702ce-1a06-46b7-ade9-46ce86186cb7" /># 🧠 AI Daily Briefing Agent
 
 An **AI-powered daily planning assistant** that reasons over real-time data sources to generate a **personalized, actionable day plan** using **Google Gemini**, structured tools, and an agent-based architecture. The assistant fetches **live weather**, **recent news**, and **confirmed local events**, then synthesizes them into a concrete, verifiable daily schedule.
 
@@ -97,6 +97,13 @@ AI_Daily_Briefing/
 * User-controlled input with real-time feedback
 
 ---
+
+Website Demo:
+<img width="1880" height="983" alt="Assistant Demo 1" src="https://github.com/user-attachments/assets/c824dc1c-5276-42d7-9188-d0d7ddeb942c" />
+> The user interface
+
+<img width="1880" height="983" alt="Assistant Demo 2" src="https://github.com/user-attachments/assets/2a5c11b1-71f8-4f0f-9df2-4613a4b34454" />
+> Sample model output
 
 ## 🔐 Environment Variables
 
