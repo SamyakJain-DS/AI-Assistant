@@ -1,5 +1,5 @@
 from datetime import date
-from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain_core.prompts import ChatPromptTemplate
 
 SYSTEM_TEXT = f"""
 Today is {date.today().strftime("%A, %B %d, %Y")}.
@@ -22,9 +22,9 @@ You MUST deliver ALL of the following in your response:
 - Keep this section to 2-3 sentences maximum
 
 📰 **SECTION 2: TOP 3 NEWS HEADLINES FOR {{topic}}**
-- List exactly THREE most important and relevant news articles published TODAY about the topic
+- List exactly THREE most important and relevant news articles published recently about the topic
 - For EACH news item include:
-  * Clear, concise 1-line summary
+  * Clear, concise 2 to 3 line summary
   * Source link in markdown format: [Read more](URL)
 - If fewer than 3 relevant news items were published today, explicitly state: "Only X relevant news items found for {{topic}} today"
 - Format as a numbered list (1. 2. 3.)

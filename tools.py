@@ -47,7 +47,7 @@ def get_news(topic: str) -> list:
     api_key = os.getenv("NEWS_API_KEY")
     url = (
         f"https://newsapi.org/v2/everything?"
-        f"q={topic}&from={today}&to={today}"
+        f"q={topic}"
         f"&pageSize=3&sortBy=publishedAt&apiKey={api_key}"
         )
     return requests.get(url).json().get("articles", [])
