@@ -135,7 +135,7 @@ SERPAPI_KEY=your_serpapi_key
 ## 👤 Author
 
 **Samyak Jain**
-📊 Data Science | 🤖 Generative AI | 🧠 Agentic Systems
+📊 Data Science | 🤖 Generative AI | 🧠 Agentic Systems <br>
 GitHub: [https://github.com/SamyakJain-DS](https://github.com/SamyakJain-DS)
 
 ---
