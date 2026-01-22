@@ -102,6 +102,8 @@ Website Demo:
 <img width="1880" height="983" alt="Assistant Demo 1" src="https://github.com/user-attachments/assets/c824dc1c-5276-42d7-9188-d0d7ddeb942c" />
 <img width="1880" height="983" alt="Assistant Demo 2" src="https://github.com/user-attachments/assets/2a5c11b1-71f8-4f0f-9df2-4613a4b34454" />
 
+---
+
 ## 🔐 Environment Variables
 
 Create a `.env` file locally or add the following to **Streamlit Cloud → Secrets**:
