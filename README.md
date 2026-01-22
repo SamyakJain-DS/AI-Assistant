@@ -2,7 +2,7 @@
 
 An **AI-powered daily planning assistant** that reasons over real-time data sources to generate a **personalized, actionable day plan** using **Google Gemini**, structured tools, and an agent-based architecture. The assistant fetches **live weather**, **recent news**, and **confirmed local events**, then synthesizes them into a concrete, verifiable daily schedule.
 
-[Link for the live website!](https://github.com/SamyakJain-DS)
+[Link for the live website!](https://ai-assistant-samyak-jain.streamlit.app/)
 
 ---
 
