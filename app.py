@@ -9,8 +9,6 @@ st.caption("A GenAI agent that reasons, selects tools, and synthesizes insights.
 city = st.text_input("Enter your city")
 topic = st.text_input("Enter the topic of interest for the day!")
 
-st.caption("Note: This app runs on the Google Gemini Free Tier. If you encounter rate limits, please try again tomorrow or at a later date.")
-
 if st.button("Generate Briefing"):
     if city and topic:
         with st.spinner("Thinking..."):
