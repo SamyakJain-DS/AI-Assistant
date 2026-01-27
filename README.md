@@ -1,6 +1,6 @@
 # 🧠 AI Daily Briefing Agent
 
-An **AI-powered daily planning assistant** that reasons over real-time data sources to generate a **personalized, actionable day plan** using **Google Gemini**, structured tools, and an agent-based architecture. The assistant fetches **live weather**, **recent news**, and **confirmed local events**, then synthesizes them into a concrete, verifiable daily schedule.
+An **AI-powered daily planning assistant** that reasons over real-time data sources to generate a **personalized, actionable day plan** using **Groq-hosted large language models**, structured tools, and an agent-based architecture. The assistant fetches **live weather**, **recent news**, and **confirmed local events**, then synthesizes them into a concrete, verifiable daily schedule.
 
 [Link for the live website!](https://ai-assistant-samyak-jain.streamlit.app/)
 
@@ -24,15 +24,18 @@ An **AI-powered daily planning assistant** that reasons over real-time data sour
 
    * A **city** (for weather and events)
    * A **topic of interest** (for news)
-2. A **Gemini-powered agent** receives a highly constrained system prompt that enforces:
+
+2. A **Groq-powered agent** receives a highly constrained system prompt that enforces:
 
    * Use of real, current, and verifiable data
    * Explicit rejection of vague or generic recommendations
+
 3. The agent dynamically decides when to call:
 
    * Weather API tool
    * News API tool
    * Events search tool
+
 4. The agent synthesizes all retrieved information into a **structured daily plan**, divided into:
 
    * 🌤️ Weather & recommendations
@@ -60,10 +63,12 @@ AI_Daily_Briefing/
 
 ### 🤖 LLM & Agent Framework
 
-* **Google Gemini 2.5 Flash**
+* **Groq – LLaMA 3.3 70B (Versatile)**
 
-  * Reasoning and planning
+  * High-performance reasoning and planning
   * Tool selection and synthesis
+  * Free-tier friendly with very low latency
+
 * **LangChain Agents**
 
   * Structured tool invocation
@@ -104,19 +109,6 @@ Website Demo:
 
 ---
 
-## 🔐 Environment Variables
-
-Create a `.env` file locally or add the following to **Streamlit Cloud → Secrets**:
-
-```env
-GOOGLE_API_KEY=your_gemini_api_key
-OPENWEATHER_API_KEY=your_openweather_api_key
-NEWS_API_KEY=your_newsapi_key
-SERPAPI_KEY=your_serpapi_key
-```
-
----
-
 ## ⚠️ Design Principles & Constraints
 
 > **This assistant prioritizes correctness over creativity.**
@@ -131,7 +123,7 @@ SERPAPI_KEY=your_serpapi_key
 
 ## ⚠️ Notes & Limitations
 
-* Runs on **Gemini Free Tier**, which is rate-limited
+* Runs on **Groq Free Tier**, which is rate-limited
 * Event availability depends on third-party data sources
 * If insufficient verified data is available, the assistant will explicitly state so
 * Designed for **daily planning**, not long-term scheduling
@@ -140,8 +132,6 @@ SERPAPI_KEY=your_serpapi_key
 
 ## 👤 Author
 
-**Samyak Jain**
-📊 Data Science | 🤖 Generative AI | 🧠 Agentic Systems <br>
-GitHub: [https://github.com/SamyakJain-DS](https://github.com/SamyakJain-DS)
+**Samyak Jain** 📊 Data Science | 🤖 Generative AI | 🧠 Agentic Systems  GitHub: [https://github.com/SamyakJain-DS](https://github.com/SamyakJain-DS)
 
 ---
