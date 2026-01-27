@@ -1,16 +1,17 @@
 import os
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_groq import ChatGroq
 from langchain.agents import create_agent
 from tools import get_weather, get_news, get_events
 from langchain_core.tools import StructuredTool
 from prompt import PLANNER_PROMPT
 
-if not os.getenv("GOOGLE_API_KEY"):
-    raise ValueError("GOOGLE_API_KEY not found in environment variables")
+if not os.getenv("GROQ_API_KEY"):
+    raise ValueError("GROQ_API_KEY not found in environment variables")
 
-llm = ChatGoogleGenerativeAI(
-    model="gemini-2.5-flash",
+llm = ChatGroq(
+    model="llama-3.3-70b-versatile",
     temperature=0.5,
+    api_key=os.getenv("GROQ_API_KEY")
 )
 
 tools = [
@@ -31,8 +32,13 @@ def run_daily_briefing(city: str, topic: str):
         result = agent_executor.invoke(
             {"messages": messages}
         )
-        
-        output = result["messages"][-1].content[0]['text']
+
+        output = None
+        if isinstance(result.get("messages", [])[-1].content, list):
+            output = result["messages"][-1].content[0].get('text', '')
+        else:
+            output = result["messages"][-1].content
+
         
         if not output or not output.strip():
             return False, (
